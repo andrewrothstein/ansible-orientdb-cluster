@@ -1,0 +1,17 @@
+---
+- name: configurating...
+  become: yes
+  become_user: root
+  template: >-
+    owner={{orientdb_user}}
+    group={{orientdb_group}}
+    src=config/{{item}}.j2
+    dest={{orientdb_config_dir}}/{{item}}
+    mode=0600
+  with_items:
+    - hazelcast.xml
+    - orientdb-server-config.xml
+    - default-distributed-db-config.json
+
+- name: installing...
+  include: '{{orientdb_installer | default("systemd")}}.yml'

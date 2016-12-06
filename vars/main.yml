@@ -1,0 +1,7 @@
+---
+# vars file for orientdb-cluster
+orientdb_config_dir : '{{orientdb_home}}/orientdb/config'
+orientdb_hazelcast_nodename : '{{inventory_hostname}}'
+
+
+

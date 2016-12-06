@@ -1,0 +1,22 @@
+---
+- name: install service
+  become: yes
+  become_user: root
+  with_items:
+    - usr/lib/systemd/system/orientdb.service
+  template: >-
+    src={{item}}.j2
+    dest=/{{item}}
+    mode=0644
+  register: orientdb_service_unit
+
+- name: systemctl daemon-reload
+  become: yes
+  become_user: root
+  command: systemctl daemon-reload
+  when: orientdb_service_unit|changed
+
+- name: launch orientdb service
+  become: yes
+  become_user: root
+  service: name=orientdb state=started enabled=yes

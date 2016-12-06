@@ -1,0 +1,29 @@
+---
+galaxy_info:
+  author: Andrew Rothstein
+  description: '@TODO name this role'
+  company: BlackRock
+  license:
+    - MIT
+  min_ansible_version: 2.0
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: MacOSX
+      versions:
+        - all
+  galaxy_tags:
+    - graph
+    - database
+
+dependencies:
+  - role: andrewrothstein.orientdb
+    version: v2.0.0
+  
