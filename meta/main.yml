@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: '@TODO name this role'
+  description: configure an orientdb cluster
   company: BlackRock
   license:
     - MIT
@@ -14,9 +14,6 @@ galaxy_info:
       versions:
         - all
     - name: Ubuntu
-      versions:
-        - all
-    - name: MacOSX
       versions:
         - all
   galaxy_tags:
