@@ -21,12 +21,12 @@ See [meta/main.yml](meta/main.yml)
 Example Playbook
 ----------------
 
-See [test.yml](test.yml) and [inventory.ini](inventory.ini) for a single pseudo cluster
+See [test.yml](test.yml) and [inventory.ini](inventory.ini) for an example cluster
 
 ```yml
 - hosts: servers
   roles:
-    - username.rolename
+    - andrewrothstein.orientdb-cluster
 ```
 
 License
@@ -37,4 +37,4 @@ MIT
 Author Information
 ------------------
 
-Andrew Rothstein andrew.rothstein@gmail.com
+Andrew Rothstein <andrew.rothstein@gmail.com>
