@@ -3,4 +3,4 @@
 - hosts: all
   roles:
     - role: '{{playbook_dir}}'
-      
+      orientdb_activate: False
