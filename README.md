@@ -1,7 +1,7 @@
 andrewrothstein.orientdb-cluster
 =========
 
-Configures an [OrientDB](http://orientdb.com/)
+Configures an [OrientDB](http://orientdb.com/) cluster
 
 Requirements
 ------------
@@ -21,10 +21,10 @@ See [meta/main.yml](meta/main.yml)
 Example Playbook
 ----------------
 
-See [test.yml](test.yml) and [inventory.ini](inventory.ini) for an example cluster
+See [test.yml](test.yml) and [test-inventory.ini](test-inventory.ini) for an example single node localhost cluster
 
 ```yml
-- hosts: servers
+- hosts: orientdb
   roles:
     - andrewrothstein.orientdb-cluster
 ```
