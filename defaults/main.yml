@@ -3,6 +3,8 @@
 orientdb_user : orientdb
 orientdb_group : orientdb
 
+orientdb_groupname: orientdb
+
 orientdb_home : /var/orientdb
 orientdb_root_password: b7d3abb6-e1c1-11e5-90cc-f77bf92301f2
 orientdb_password : d1d32e0c-e17f-11e5-b188-14dae9f5445f
@@ -11,17 +13,18 @@ orientdb_hazelcast_name: orientdb
 orientdb_hazelcast_password: c3753590-bbb2-11e6-b1c8-ffe0ab26ee38
 orientdb_hazelcast_port : 2434
 
-orientdb_hazelcast_multicast_enabled: true
+orientdb_hazelcast_multicast_enabled: True
 orientdb_hazelcast_multicast_group: '235.1.1.1'
 orientdb_hazelcast_multicast_port : 2343
 
-orientdb_hazelcast_tcp_enabled: false
+orientdb_hazelcast_tcp_enabled: False
 orientdb_hazelcast_tcp_network_interface: eth0
+orientdb_hazelcast_tcp_use_ip: False
 
 orientdb_hazelcast_executor_service_pool_size: 16
 
-orientdb_profiler_enabled: false
-orientdb_profiler_managed: true
+orientdb_profiler_enabled: False
+orientdb_profiler_managed: True
 
 orientdb_autobackup:
   enabled: false
@@ -42,3 +45,4 @@ orientdb_tokenhandler:
   sessionLength : 60
   encryptionAlgorithm: HmacSHA256
 
+orientdb_activate: True

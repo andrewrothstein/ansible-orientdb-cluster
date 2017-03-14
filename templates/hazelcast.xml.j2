@@ -24,11 +24,11 @@
 	<multicast-port>{{orientdb_hazelcast_multicast_port}}</multicast-port>
       </multicast>
 {% endif %}
-{% if orientdb_hazelcast_tcp_enabled and 'orientdb' in groups %}
+{% if orientdb_hazelcast_tcp_enabled and orientdb_groupname in groups %}
       <multicast enabled="false" />
       <tcp-ip enabled="{{orientdb_hazelcast_tcp_enabled | to_json}}">
-{% for peer in groups['orientdb'] %}
-	<member>{{hostvars[peer]['ansible_' + orientdb_hazelcast_tcp_network_interface]['ipv4']['address']}}</member>
+{% for peer in groups[orientdb_groupname] %}
+	<member>{% if orientdb_hazelcast_tcp_use_ip %}{{hostvars[peer]['ansible_' + orientdb_hazelcast_tcp_network_interface]['ipv4']['address']}}{% else %}{{peer}}{% endif %}</member>
 {% endfor %}
       </tcp-ip>
 {% endif %}
