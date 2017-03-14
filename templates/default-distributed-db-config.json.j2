@@ -16,7 +16,7 @@
 	},
 	"*": {
 	    "servers" : [
-		{% for peer in groups[orientdbd_groupname'] %}{{ peer | hash('sha1') | to_json }}{% if not loop.last %},{% endif %}{% endfor %}
+		{% for peer in groups[orientdbd_groupname] %}{{ peer | hash('sha1') | to_json }}{% if not loop.last %},{% endif %}{% endfor %}
 	    ]
 	}
     }
