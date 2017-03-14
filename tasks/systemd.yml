@@ -4,7 +4,7 @@
   become_user: root
   with_items:
     - f: orientdb.service
-      d: /usr/lib/systemd/system
+      d: /etc/systemd/system
       m: '0644'
   template:
     src: '{{item.f}}.j2'
