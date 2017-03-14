@@ -4,13 +4,13 @@
   become_user: root
   with_items:
     - f: hazelcast.xml
-      d: '{{orientdb_config_dir}}/config'
+      d: '{{orientdb_config_dir}}'
       m: '0600'
     - f: orientdb-server-config.xml
-      d: '{{orientdb_config_dir}}/config'
+      d: '{{orientdb_config_dir}}'
       m: '0600'
     - f: default-distributed-db-config.json
-      d: '{{orientdb_config_dir}}/config'
+      d: '{{orientdb_config_dir}}'
       m: '0600'
   template:
     owner: '{{orientdb_user}}'
