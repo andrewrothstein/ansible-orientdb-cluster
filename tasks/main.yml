@@ -20,4 +20,4 @@
     mode: '{{item.m}}'
 
 - name: installing...
-  include: '{{orientdb_installer | default("systemd")}}.yml'
+  include_tasks: '{{orientdb_installer | default("systemd")}}.yml'
