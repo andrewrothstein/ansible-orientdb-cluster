@@ -13,6 +13,13 @@ galaxy_info:
     - name: Fedora
       versions:
         - all
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+    - name: Archlinux
+      versions:
+        - all
     - name: Ubuntu
       versions:
         - xenial
@@ -22,4 +29,4 @@ galaxy_info:
 
 dependencies:
   - role: andrewrothstein.orientdb
-    version: v2.0.7
+    version: v2.0.8
