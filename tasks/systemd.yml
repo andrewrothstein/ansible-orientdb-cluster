@@ -15,7 +15,7 @@
 - name: systemctl daemon-reload
   become: yes
   become_user: root
-  when: orientdb_service_unit|changed and orientdb_activate
+  when: orientdb_service_unit is changed and orientdb_activate
   command: systemctl daemon-reload
 
 - name: launch orientdb service
