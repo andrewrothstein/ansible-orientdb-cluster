@@ -16,7 +16,8 @@
   become: yes
   become_user: root
   when: orientdb_service_unit is changed and orientdb_activate
-  command: systemctl daemon-reload
+  systemd:
+    daemon_reload: yes
 
 - name: launch orientdb service
   become: yes
